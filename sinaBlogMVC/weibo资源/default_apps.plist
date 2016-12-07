@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>短视频</string>
+		<key>appKey</key>
+		<string>2089595492</string>
+		<key>bundleID</key>
+		<string>com.yixia.videoeditor</string>
+		<key>certificateInfo</key>
+		<dict>
+			<key>app_logo</key>
+			<string>compose_more_shooting.png</string>
+		</dict>
+		<key>extraInfo</key>
+		<dict>
+			<key>is_default</key>
+			<true/>
+			<key>is_local_path</key>
+			<string>YES</string>
+			<key>download_url</key>
+			<string>http://itunes.apple.com/us/app/miao-pai-shou-ji-shi-pin-miao/id481587094?ls=1&amp;mt=8</string>
+		</dict>
+	</dict>
+</array>
+</plist>

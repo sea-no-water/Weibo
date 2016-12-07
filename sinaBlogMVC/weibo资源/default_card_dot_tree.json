@@ -1,0 +1,124 @@
+{
+    "version": "0",
+    "cards": [
+        {
+            "id": "me",
+            "name": "个人页",
+            "node_type": "0",
+            "tip_type": "2",
+            "childnode": [
+                {
+                    "id": "payment",
+                    "name": "微博支付",
+                    "node_type": "0",
+                    "tip_type": "1",
+                    "childnode": [
+                        {
+                            "id": "card_coupon",
+                            "name": "卡券",
+                            "node_type": "0",
+                            "tip_type": "1"
+                        },
+                        {
+                            "id": "transaction",
+                            "name": "交易",
+                            "node_type": "0",
+                            "tip_type": "1"
+                        }
+                    ]
+                },
+                {
+                    "id": "vip",
+                    "name": "个性化",
+                    "node_type": "0",
+                    "tip_type": "1",
+                    "childnode": [
+                        {
+                            "id": "hot_event",
+                            "name": "置顶",
+                            "node_type": "0",
+                            "tip_type": "3"
+                        },
+                        {
+                            "id": "custom_source",
+                            "name": "自定义背景",
+                            "node_type": "0",
+                            "tip_type": "3"
+                        },
+                        {
+                            "id": "cover",
+                            "name": "封面",
+                            "node_type": "0",
+                            "tip_type": "3"
+                        },
+                        {
+                            "id": "themes",
+                            "name": "主题",
+                            "node_type": "0",
+                            "tip_type": "3"
+                        }
+                    ]
+                },
+                {
+                    "id": "follower",
+                    "name": "新粉丝",
+                    "node_type": "0",
+                    "tip_type": "2"
+                },
+                {
+                    "id": "information",
+                    "name": "完善资料",
+                    "canDelete": "1",
+                    "node_type": "0",
+                    "tip_type": "1"
+                }
+            ]
+        },
+        {
+            "id": "public_function_entrance",
+            "name": "公共功能入口",
+            "canDelete": "1",
+            "node_type": "0",
+            "tip_type": "1",
+            "childnode": [
+                {
+                    "id": "radar_entrance",
+                    "name": "雷达入口",
+                    "canDelete": "1",
+                    "node_type": "0",
+                    "tip_type": "1",
+                    "childnode": [
+                        {
+                            "id": "radar_tv",
+                            "name": "电视",
+                            "canDelete": "1",
+                            "node_type": "0",
+                            "tip_type": "1"
+                        },
+                        {
+                            "id": "radar_person",
+                            "name": "人",
+                            "canDelete": "1",
+                            "node_type": "0",
+                            "tip_type": "1"
+                        },
+                        {
+                            "id": "radar_card_coupon",
+                            "name": "卡券",
+                            "canDelete": "1",
+                            "node_type": "0",
+                            "tip_type": "1"
+                        },
+                        {
+                            "id": "radar_uber",
+                            "name": "Uber",
+                            "canDelete": "1",
+                            "node_type": "0",
+                            "tip_type": "1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

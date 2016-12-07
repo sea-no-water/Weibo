@@ -1,0 +1,6 @@
+{
+	"default":"打卡第{day}天，{cursor}运动只为更好的自己！#运动就是坚持#快来加入{checkin_url}吧",
+	"100006":"打卡第{day}天，今天{cursor}已完成{step}步！#运动就是坚持#快来加入{checkin_url}吧",
+	"100008":"打卡第{day}天，{cursor}{distance}公里目标已达成！#运动就是坚持#快来加入{checkin_url}吧",
+	"100007":"打卡第{day}天，{cursor}称重任务已完成！#运动就是坚持# 每一天距离完美身材更进一步[推荐] {checkin_url}"
+}

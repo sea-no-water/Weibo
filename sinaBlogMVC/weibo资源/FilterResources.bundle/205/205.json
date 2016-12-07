@@ -1,0 +1,13 @@
+{
+    "filtername_zh": "黑白",
+    "filtername_en": "B&W",
+    "filtername_tw": "黑白",
+    "icon": "filter_icon.png",
+    "isDeletable": "0",
+    "filterid":"205",
+    "vsh": "",
+    "fsh": "NwzukuJdv3jrREOlStFJ8yAT6RVToiEFWsdUbzZFC5iwDtR/T8hUm92aDvJLLsevhI5N71KS8uu+GHOZAvVkCVBzqpOSAdoVL9YLikeWJvH2R0qDWCdz3ZIe7QAkD99BcoTixfjI+ACXfowy2kp5f0nNZNiFjvSNVW54fVmc+41vSCEtkThasHmx+6lykcbGpiHrEFcoJl6oKZIjexQuU9/qgmvJHumi2wfS30JqbshKFFnbccRNw3SvM2asg6EUtdeve8/wP4QU3FXjKAe40ePIlPgBxJt1hgXkXiVROzUCTdFhN5Jnt/V77m50r3fDeyY0+iBdX3iZbEkuw5xYQkM8uh9qb1ucKS900IeQwZyRbm/aIzqtDNjC2WqR+rx4ipOzsG6R2IYJnd33dbVToJICYm3wEv0BhXFDsQTq3EXPeQkxvf2fDAWNdkpfdATZs2PGVoWorNh4+2zI/15edZjW52Tyu72vB4O1eztntrvAU1+o7vYIpMW+cwRR6VulyXnx/QqkKNHrXrVkravzrrNTJUopkyvv/xdGtaeLhaswQdfbcra6GQa6Bhqd3QwJSW84YHgH/B+mnrQj3GTUM/6A44vEwAfQmieMH3oB10n/pQ55kkbKTfwJQXgRtuR6ORULuqSB5WMzKrPU65G8cJQVnFF2cpp8tdOhyNIxxelZA8lRPi7qPbCVANzurgBPIfZam4vXCNDe0YW89MmaScnKttLF0UkO1buW7cV23vXktD0R5NBFbP+OdnNB2BT0P8Aarq6VV6QBlznUOQTzmKRvCKzaLVnGiYeVeBSmJ2yeRY2iT5TNUe0Gll7kp3AfsxBw0xNk/hVKj5VWB8xbTyXnxJ7Jen53t1spT+xjqUrCTMh1nn+ZpykP5SBY3qYcFYYXcV/zADMlmrAXLI4nL8fLmwCfo7RDn/0vn11KyjyfxQW9nD3O9ojCpH/zczeBlzml+L0gS8QOKY9ckR7Bh9F32lHHny7mPC6/XRdJCsi5I4U11Exr2huk8KGo5jn0xOa7PQO6t5ULi/+lF7Iaz3w4vZ/Jb9F54ismhI66LPBRnGQjXY7seJQPf8a816j6VvE45mqvpvIidE2jesHNDueb4OKFwlVScnVYnX4syuPSWdmABDhM5igWuB8Jec75azJZtjn10tsEbS2d5noJqdwy1RbUePKS+1iTqxJj8+tKz+wbiLpCUm8Ti00bSnZPt8maUW7b2U09CZrns4wVjaVlB11VPXgVoQ3jN7XiNeGQErWe8CMZOfKEjk7zwY1Ow8EmjX6PUvXGUeZPNZ30I3aGOYHMYxk4s7DKdI1XAEvPEmuWlKYrGmInXA1Wtb4qCIn2lo74ZoetjSrNT2f3oGjVonoIXKanTjeaeU1hhhH5qsJ0B3xD7TG4Ew8WLcWXLf5nc5YPP6hSgMDvQJXK47f6XMEz6tNhNyZR/idEiCnBKWGKuLH2v0iF+gt0WneEftkyA7m1QBChjF/HmvoJuHCrDgdwvbM12TKrbPYIBnBkW5B5JkBUSP+xLwBGhnipZae2lec3vtxSBy9g9FzkYUK/9irUDRhgGPSJTQs6MMvYWUMaJGNVuYVdUIX+Vqfz08FCMJKkE4AbUQoZbfuZ9lmE4sUrkFtqNh8hikjSIi5m5jCbG0+Ly3jfIgP4RVq/m+EV+vWJnBx5tBmVFjBIR0+a+AFbx1SYtN8R3WVq+XOm36Z8rvtXHFhhWkYWXN8EhT6cEuyV8ATIj2VBWblx/S9D/WJ63pEm+TOajOmvpkhFSSCBwvpnxptymYhmXMEeFQzFeNuM6mxVXu761DNlXvmu2vtwixpo3GcA9NP4oi7FuKFSQhn7HpgQvtMN+/WVeEfNee/qLL1DNFH13JOLmoEei4Tv6+6kWtVzppY98X+JiiXLcAL27JMj5JlL1k36ou4y+ZtIcOcX4I1k//Xuz6C7+JVRwWWzhf8ABz+DoLw=",
+    "textures": [
+                 "bw.png"
+			    ]
+}

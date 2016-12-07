@@ -1,0 +1,31 @@
+{
+    "icon_shortcuts": [{
+        "title": {
+        	"zh": "写微博",
+        	"en": "New Post",
+        }, 
+        "scheme": "sinaweibo://compose",
+        "icon": "launch"
+    }, {
+    	"title": {
+        	"zh": "热门微博",
+        	"en": "Hot Weibo",
+        }, 
+        "scheme": "sinaweibo://fragmentpage?containerid=102803&needlocation=1",
+        "icon": "hot"
+    }, {
+    	"title": {
+        	"zh": "搜索",
+        	"en": "Search",
+        }, 
+        "scheme": "sinaweibo://searchall",
+        "icon": "search"
+    }, {
+    	"title": {
+        	"zh": "扫描二维码",
+        	"en": "Scan QR Code",
+        }, 
+        "scheme": "sinaweibo://qrcode",
+        "icon": "qrcode"
+    }]
+}

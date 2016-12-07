@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>History_FileName_Mapping</key>
+	<dict>
+		<key>29600</key>
+		<string>weibos8_%@.dat</string>
+		<key>29500</key>
+		<string>weibos8_%@.dat</string>
+		<key>29100</key>
+		<string>weibos7_%@.dat</string>
+		<key>29000</key>
+		<string>weibos7_%@.dat</string>
+	</dict>
+	<key>Upgrade_Versions</key>
+	<array>
+		<real>29500</real>
+		<integer>30000</integer>
+		<integer>30500</integer>
+		<integer>31000</integer>
+		<integer>31500</integer>
+		<integer>32000</integer>
+		<integer>32200</integer>
+		<integer>33000</integer>
+		<integer>33500</integer>
+		<integer>34000</integer>
+		<integer>35000</integer>
+		<integer>36000</integer>
+		<integer>36001</integer>
+		<integer>40000</integer>
+		<integer>41000</integer>
+		<real>42000</real>
+		<integer>42500</integer>
+		<integer>43000</integer>
+		<real>43500</real>
+		<real>44000</real>
+		<integer>45000</integer>
+		<real>45500</real>
+		<real>46000</real>
+		<real>46100</real>
+		<integer>50000</integer>
+		<real>51000</real>
+		<real>52800</real>
+		<real>53000</real>
+		<real>53500</real>
+		<real>54000</real>
+		<real>54500</real>
+		<real>55000</real>
+		<real>56000</real>
+		<integer>57000</integer>
+		<integer>60000</integer>
+		<integer>63000</integer>
+		<integer>63100</integer>
+		<integer>64000</integer>
+		<integer>64200</integer>
+		<integer>65000</integer>
+		<integer>65100</integer>
+		<integer>66000</integer>
+		<integer>66100</integer>
+		<integer>67000</integer>
+	</array>
+	<key>Upgrade_SQLs</key>
+	<dict>
+		<key>67000</key>
+		<array>
+			<string>CREATE TABLE &quot;square_headlines&quot; (id integer primary key autoincrement,abstract text,id_ text ,abstract_state text,article_url text,attitudes_count text,comments_count text,has_images text,reposts_count text,source text,title text,from_ text,image text,middle_image text,large_image text,mid text,points text,points_cnt text,push_type text,oid text,suggested_users text,feed_type text,category text,original_url text,activity_keys text, b_type text,reason text,ads_type text,image_cover text,videos text, timestamp double,readstate text,loadindex int,schema_url text);</string>
+		</array>
+		<key>66100</key>
+		<array>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;positive_recom_flag&quot; INTEGER</string>
+		</array>
+		<key>66000</key>
+		<array>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD follow_to_read_card TEXT</string>
+		</array>
+		<key>65100</key>
+		<array>
+			<string>ALTER TABLE &quot;weibos&quot; ADD avatar_extend_info TEXT</string>
+		</array>
+		<key>65000</key>
+		<array>
+			<string>ALTER TABLE &quot;task_queue&quot; ADD  topic_id TEXT</string>
+			<string>ALTER TABLE &quot;task_queue&quot; ADD  sync_mblog INTEGER</string>
+			<string>ALTER TABLE &quot;timeline_trends&quot; ADD  extra_struct TEXT</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD extra_button_info INTEGER</string>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD pragraph_models TEXT</string>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD pay_pragraph_models TEXT</string>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD article_conent_total_height float DEFAULT 0</string>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD no_need_pay_pictures TEXT</string>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD need_pay_pictures TEXT</string>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD readable_scale float DEFAULT 1</string>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD is_follow_to_read  INTEGER DEFAULT 0</string>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD is_author_followed  INTEGER</string>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD article_source  INTEGER DEFAULT 0</string>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD article_fingerprinting TEXT</string>
+		</array>
+		<key>64200</key>
+		<array>
+			<string>drop table timeline_trends</string>
+			<string>CREATE TABLE timeline_trends (trend_id text PRIMARY KEY,group_type varchar(50),type varchar(50),styleid varchar(50),feeds_content text,dateline integer,trend_title varchar(50),oid varchar(255),image_url varchar(255),image_scheme varchar(255),menu_ids text,bottom_buttons text,titles text,trend_index integer,hide_border integer);</string>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD isdiscuss INTEGER</string>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD  original_url TEXT</string>
+		</array>
+		<key>64000</key>
+		<array>
+			<string>ALTER TABLE &quot;weibos&quot; ADD relation INTEGER</string>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD article_cards TEXT</string>
+		</array>
+		<key>63100</key>
+		<array>
+			<string>ALTER TABLE &quot;timeline_section&quot; ADD preAdsInterval INTEGER DEFAULT (-1002)</string>
+			<string>ALTER TABLE &quot;timeline_section&quot; ADD lastAdsInterval INTEGER DEFAULT (-1002)</string>
+			<string>ALTER TABLE &quot;wb_article&quot; ADD copyright TEXT</string>
+			<string>CREATE TABLE &quot;ad_video_cache&quot; (&quot;id&quot; integer PRIMARY KEY AUTOINCREMENT NOT NULL,&quot;oid&quot; text DEFAULT(&apos;&apos;),&quot;posid&quot; text DEFAULT(&apos;&apos;),&quot;url&quot; text DEFAULT(&apos;&apos;),&quot;filesize&quot; integer DEFAULT(0),&quot;endtime&quot; integer DEFAULT(0),&quot;downtime&quot; integer DEFAULT(0),&quot;downflag&quot; integer DEFAULT(0),&quot;sendflag&quot; integer DEFAULT(0));</string>
+		</array>
+		<key>63000</key>
+		<array>
+			<string>ALTER TABLE &quot;weibos&quot; ADD source_type TEXT</string>
+		</array>
+		<key>60000</key>
+		<array>
+			<string>CREATE TABLE &quot;long_status&quot; (&quot;mblogid&quot; INTEGER NOT NULL, &quot;preload_type&quot; INTEGER, &quot;content&quot; TEXT);</string>
+		</array>
+		<key>57000</key>
+		<array>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD coverUrls TEXT;</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD pic_bg_scheme TEXT;</string>
+			<string>CREATE TABLE &quot;compose_attachments&quot; (&quot;id&quot; TEXT ,&quot;key&quot; TEXT,&quot;properties&quot; TEXT, &quot;is_draft&quot; INTEGER DEFAULT 1);</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;preload_type&quot; INTEGER;</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;continue_tag&quot; TEXT;</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;rt_preload_type&quot; INTEGER;</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;rt_continue_tag&quot; TEXT;</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;preload_article_ids&quot; TEXT;</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;preload_info&quot; TEXT;</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;rt_preload_article_ids&quot; TEXT;</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;rt_preload_info&quot; TEXT;</string>
+			<string>CREATE TABLE &quot;wb_article&quot; (&quot;object_id&quot; TEXT NOT NULL, &quot;create_at&quot; INTEGER, &quot;title&quot; TEXT, &quot;summary&quot; TEXT, &quot;url&quot; TEXT, &quot;status&quot; INTEGER, &quot;object_type&quot; TEXT, &quot;content&quot; TEXT, &quot;is_pay&quot; INTEGER, &quot;is_reward&quot; INTEGER, &quot;pay_content&quot; TEXT, &quot;writers&quot; TEXT, &quot;background&quot; TEXT, &quot;theme&quot; TEXT, &quot;read_count&quot; TEXT, &quot;user_info&quot; TEXT, &quot;reward_button_info&quot; TEXT, &quot;recommend_scheme&quot; TEXT, &quot;pictures&quot; TEXT, &quot;cover_image&quot; TEXT, &quot;share_type&quot; TEXT, &quot;share_position&quot; TEXT, &quot;pay_scheme&quot; TEXT, &quot;original_status&quot; TEXT, &quot;follow_button&quot; TEXT, &quot;is_invalid&quot; INTEGER, &quot;share_content&quot; TEXT, &quot;page_id&quot; TEXT, &quot;content_ext&quot; TEXT, &quot;pay_text&quot; TEXT);</string>
+			<string>ALTER TABLE &quot;timeline_pageinfos&quot; ADD &quot;source_type&quot; TEXT;</string>
+		</array>
+		<key>56000</key>
+		<array>
+			<string>ALTER TABLE &quot;weibos&quot; ADD shared_count INTEGER;</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD promotion TEXT;</string>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD isPush_airborne INTEGER DEFAULT 0;</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD pic_bg_text TEXT;</string>
+		</array>
+		<key>55000</key>
+		<array>
+			<string>ALTER TABLE &quot;weibos&quot; ADD products TEXT;</string>
+		</array>
+		<key>54500</key>
+		<array>
+			<string>ALTER TABLE &quot;timeline_pagecards&quot; ADD use_count INTEGER</string>
+			<string>CREATE TABLE timeline_pageinfos (id integer PRIMARY KEY NOT NULL, pageID varchar(255), pageTitle varchar(255), pageURL varchar(255), pageTypeImageURL varchar(255), pageImageURL varchar(255), pageDescription varchar(255), tips varchar(255), isAsync integer, type integer,contents text, lastUpdateTime double, cards text, pageInfoKey varchar(255), subtype integer, extra_properties text, type_icon text, content1_icon text, loadMoreText varchar(255), use_count integer);</string>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD postion_objects TEXT;</string>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD isPublic INTEGER DEFAULT 0;</string>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD distance TEXT;</string>
+		</array>
+		<key>54000</key>
+		<array>
+			<string>ALTER TABLE &quot;weibos&quot; ADD shared_url TEXT</string>
+			<string>ALTER TABLE &quot;timeline_pagecards&quot; ADD loadMoreText VARCHAR(255);</string>
+		</array>
+		<key>53500</key>
+		<array>
+			<string>CREATE TABLE group_user( id INT, userID TEXT, screenName TEXT, profileImageURL TEXT, remark TEXT, extendedDescription TEXT, relationship INT, verifiedType INT, originalVerifiedType TEXT, permission INT, lastUsedTime NUM, lastMessageTime NUM, sortName TEXT, sortSectionName TEXT, searchText TEXT, phoneNumber TEXT, phoneName TEXT, meyouRelationship INT, messageUncompletedText TEXT, lastStatusContent TEXT, membershipType INT, membershipRank INT, isPage NUM, scheme TEXT, sortNameWithRemark TEXT)
+</string>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD admins TEXT;</string>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD global_max_admin INTEGER;</string>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD max_admin INTEGER;</string>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD group_ts REAL;</string>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD validate_type INTEGER;</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD pic_bg_type TEXT</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD card_id TEXT</string>
+		</array>
+		<key>53000</key>
+		<array>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD affiliation_objects TEXT;</string>
+		</array>
+		<key>52800</key>
+		<array>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD filterquery INTEGER DEFAULT 0</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD mlevel INTEGER</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD rootmlevel INTEGER</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD placedic TEXT</string>
+		</array>
+		<key>51000</key>
+		<array>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD toolbarInfo TEXT</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD source_allowclick INTEGER</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD source_url TEXT</string>
+			<string>ALTER TABLE &quot;comments&quot; ADD source_url TEXT</string>
+			<string>ALTER TABLE &quot;comments&quot; ADD source_allowclick INTEGER</string>
+			<string>ALTER TABLE &quot;comments&quot; ADD source TEXT</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;savetime&quot; DOUBLE</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;promotion_info&quot; TEXT</string>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD groupDes TEXT</string>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD activateStatus INTEGER</string>
+			<string>ALTER TABLE &quot;contacts&quot; ADD &quot;sortNameWithRemark&quot; VARCHAR(255);</string>
+		</array>
+		<key>50000</key>
+		<array>
+			<string>drop table if exists beacons</string>
+			<string>CREATE TABLE beacons (  identifier varchar(255) NOT NULL,  uuid varchar NOT NULL,  major integer NOT NULL DEFAULT(0),  minor integer NOT NULL DEFAULT(0),  lifeTime double DEFAULT(0),  lastNoticedTime double,  noticeInfo text,  delayTime double DEFAULT(0),  scheme varchar(255),  clientradius integer DEFAULT(0),  name varchar(255),  priority integer DEFAULT(0),  type varchar(10),  version integer DEFAULT(0));</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD icons TEXT</string>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD hostID TEXT</string>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD shortUrl TEXT</string>
+			<string>ALTER TABLE &quot;directional_groups&quot; ADD avatarUrlStr TEXT</string>
+			<string>ALTER TABLE &quot;card_unread_node&quot; ADD &quot;icon&quot; VARCHAR(50);</string>
+			<string>ALTER TABLE &quot;card_unread_node&quot; ADD &quot;text&quot; VARCHAR(50);</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;reads_count&quot; INTEGER;</string>
+			<string>ALTER TABLE &quot;contacts&quot; ADD &quot;lastStatusContent&quot; TEXT;</string>
+			<string>ALTER TABLE &quot;contacts&quot; ADD &quot;membershipType&quot; INTEGER;</string>
+			<string>ALTER TABLE &quot;contacts&quot; ADD &quot;membershipRank&quot; INTEGER;</string>
+			<string>ALTER TABLE &quot;contacts&quot; ADD &quot;isPage&quot; BOOLEAN;</string>
+			<string>ALTER TABLE &quot;contacts&quot; ADD &quot;scheme&quot; VARCHAR(255);</string>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD &quot;followsScheme&quot; VARCHAR(255);</string>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD &quot;fansScheme&quot; VARCHAR(255);</string>
+		</array>
+		<key>46100</key>
+		<array>
+			<string>update task_queue set _state = 0</string>
+		</array>
+		<key>46000</key>
+		<array>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;source_scheme&quot;  VARCHAR(200);</string>
+			<string>CREATE TABLE &quot;directional_groups&quot; (groupID TEXT PRIMARY KEY NOT NULL, groupName TEXT, ownerID TEXT, ownerName TEXT, userCount INTEGER DEFAULT 0, push INTEGER DEFAULT 0, filterFeed INTEGER DEFAULT 0, createTime DOUBLE DEFAULT 0, addSession INTEGER DEFAULT 0, maxMember INTEGER DEFAULT 100, lastUsingTime DOUBLE DEFAULT 0, joinTime DOUBLE, avatarUrl TEXT, page_objectid TEXT, lastAccessTime DOUBLE, defaultGroupName INTEGER DEFAULT 0)</string>
+			<string>CREATE TABLE &quot;directional_group_member&quot; (groupID TEXT NOT NULL, userID TEXT NOT NULL)</string>
+			<string>CREATE TABLE &quot;card_unread_node&quot; (unreadID varchar(50) PRIMARY KEY NOT NULL,rootID varchar(50), parentID varchar(50), childrenIDs TEXT, tipType INTEGER DEFAULT 0, nodeType INTEGER DEFAULT 0, isShowed INTEGER DEFAULT 0, isLeaf INTEGER DEFAULT 0, unread INTEGER DEFAULT 0, showingUnread INTEGER DEFAULT 0)</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD keyword_structs TEXT</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD pic_bg TEXT</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;groupid&quot; VARCHAR(50);</string>
+		</array>
+		<key>45500</key>
+		<array>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD &quot;member_type&quot; INTEGER;</string>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD &quot;mbrank&quot; INTEGER;</string>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD &quot;gender&quot; INTEGER;</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;rid&quot; TEXT</string>
+		</array>
+		<key>45000</key>
+		<array>
+			<string>ALTER TABLE &quot;timeline_trends&quot; ADD &quot;trend_index&quot; INTEGER</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;weibo_index&quot; INTEGER</string>
+			<string>CREATE TABLE &quot;timeline_section&quot; (&quot;max_id&quot; VARCHAR(10) DEFAULT (-1002) ,&quot;min_id&quot; VARVHAR(10) DEFAULT (-1002) ,&quot;max_aid&quot; VARCHAR(10) DEFAULT (-1002) ,&quot;min_aid&quot; VARCHAR(10) DEFAULT (-1002) ,&quot;group_type&quot; varchar(50),&quot;section_id&quot; VARCHAR(50) PRIMARY KEY  NOT NULL  DEFAULT (null) ,&quot;start_index&quot; INTEGER DEFAULT (-1002) ,&quot;end_index&quot; INTEGER DEFAULT (-1002) )</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;rtrootportrait&quot; TEXT</string>
+			<string>ALTER TABLE &quot;article&quot; ADD &quot;properties&quot; TEXT</string>
+			<string>ALTER TABLE &quot;article&quot; ADD &quot;attributed_string&quot; BLOB</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;multimedia&quot; TEXT</string>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD relationship INTEGER</string>
+			<string>ALTER TABLE &quot;hotword&quot; ADD mini_icon TEXT</string>
+		</array>
+		<key>44000</key>
+		<array>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD &quot;description&quot; TEXT</string>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD &quot;verified_reason&quot; TEXT</string>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD &quot;v4VerifiedType&quot; INTEGER</string>
+			<string>ALTER TABLE &quot;timeline_trends&quot; ADD &quot;titles&quot; TEXT</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;title&quot; TEXT</string>
+			<string>DELETE FROM hotword</string>
+			<string>ALTER TABLE &quot;hotword&quot; ADD image TEXT</string>
+			<string>ALTER TABLE &quot;hotword&quot; ADD icon TEXT</string>
+			<string>ALTER TABLE &quot;hotword&quot; ADD type INTEGER</string>
+			<string>ALTER TABLE &quot;hotword&quot; ADD content TEXT</string>
+			<string>ALTER TABLE &quot;hotword&quot; ADD pageid TEXT</string>
+			<string>ALTER TABLE &quot;hotword&quot; ADD desc TEXT</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;title_structs&quot; TEXT</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;tag_structs&quot; TEXT</string>
+			<string>ALTER TABLE &quot;timeline_pagecards&quot; ADD &quot;content1_icon&quot; TEXT</string>
+		</array>
+		<key>43500</key>
+		<array>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD &quot;hideRelation&quot; INTEGER </string>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD &quot;coverUrl&quot; VARCHAR(255) </string>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD &quot;profileImageURL&quot; VARCHAR(255) </string>
+			<string>CREATE TABLE &quot;pageinfos&quot; (&quot;containerID&quot; varchar(255) PRIMARY KEY,&quot;background_client&quot; varchar(255),&quot;desc&quot; varchar(255),&quot;nick&quot; varchar(255),&quot;page_type&quot; varchar(255),&quot;portrait&quot; varchar(255))</string>
+		</array>
+		<key>43000</key>
+		<array>
+			<string>ALTER TABLE &quot;contact_x_group&quot; ADD &quot;onlineIndex&quot; INTEGER </string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;mbrank&quot; VARCHAR(50)</string>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD &quot;tabInfo&quot; TEXT</string>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD &quot;followersCount&quot; INTEGER</string>
+			<string>ALTER TABLE &quot;profileusers&quot; ADD &quot;followingCount&quot; INTEGER</string>
+			<string>ALTER TABLE &quot;timeline_trends&quot; ADD &quot;bottom_buttons&quot; TEXT </string>
+			<string>ALTER TABLE &quot;timeline_pagecards&quot; ADD &quot;type_icon&quot; TEXT</string>
+			<string>CREATE TABLE &quot;shield_mblog&quot; (&quot;id&quot; INTEGER PRIMARY KEY,&quot;mblog_id&quot; varchar(10),&quot;shield_type&quot; varchar(10))</string>
+			<string>CREATE TABLE &quot;article&quot; (&quot;id&quot; TEXT ,&quot;title&quot; TEXT,&quot;content&quot; TEXT,&quot;rect&quot; TEXT,&quot;is_draft&quot; INTEGER DEFAULT 1 )</string>
+		</array>
+		<key>42500</key>
+		<array>
+			<string>ALTER TABLE &quot;contact_groups&quot; ADD &quot;sysgroup&quot; TEXT</string>
+		</array>
+		<key>42000</key>
+		<array>
+			<string>ALTER TABLE &quot;pm_messages&quot; ADD &quot;url_struct&quot; TEXT</string>
+		</array>
+		<key>41000</key>
+		<array>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;deleted&quot; INTEGER</string>
+			<string>ALTER TABLE &quot;weibos&quot; ADD extra_properties TEXT</string>
+			<string>DELETE FROM button_detail</string>
+			<string>DELETE FROM button_link</string>
+			<string>DELETE FROM pm_attachments</string>
+			<string>DELETE FROM pm_conversations WHERE priority=0</string>
+			<string>DELETE FROM pm_messages</string>
+			<string>DELETE FROM timeline_pagecards</string>
+			<string>DELETE FROM timeline_trends</string>
+			<string>DELETE FROM weibos</string>
+		</array>
+		<key>40000</key>
+		<array>
+			<string>ALTER TABLE &quot;weibos&quot; ADD &quot;recom_state&quot; INTEGER</string>
+			<string>DELETE FROM timeline_trends</string>
+			<string>drop table my_comments</string>
+			<string>CREATE TABLE comments (id integer NOT NULL PRIMARY KEY AUTOINCREMENT,commentid varchar(50),commentv4id varchar(50),type varchar(50),commenttime INTEGER, commentdata BLOB)</string>
+		</array>
+		<key>36001</key>
+		<array>
+			<string>drop table timeline_trends</string>
+			<string>CREATE TABLE &quot;timeline_trends&quot; (&quot;trend_id&quot; INTEGER PRIMARY KEY,&quot;group_type&quot; varchar(50),type varchar(50),styleid varchar(50),&quot;feeds_content&quot; text, dateline integer, &quot;trend_title&quot; varchar(50), &quot;oid&quot; varchar(255), image_url varchar(255), image_scheme varchar(255), menu_ids TEXT)</string>
+		</array>
+		<key>36000</key>
+		<array>
+			<string>alter table profileusers add column lastUpdateUserInfoTime timestamp</string>
+			<string>drop table timeline_trends</string>
+			<string>CREATE TABLE &quot;timeline_trends&quot; (&quot;trend_id&quot; INTEGER PRIMARY KEY,&quot;group_type&quot; varchar(50),type varchar(50),styleid varchar(50),&quot;feeds_content&quot; text, dateline integer, &quot;trend_title&quot; varchar(50), &quot;oid&quot; varchar(255), image_url varchar(255), image_scheme varchar(255))</string>
+			<string>CREATE TABLE &quot;button_detail&quot; (id integer NOT NULL PRIMARY KEY AUTOINCREMENT,button_id TEXT,detail TEXT,sub_type INTEGER,count INTEGER)</string>
+			<string>CREATE TABLE &quot;button_link&quot; (id integer NOT NULL PRIMARY KEY AUTOINCREMENT,source_id TEXT,target_id TEXT)</string>
+			<string>alter table weibos add column button_ids text</string>
+			<string>alter table pm_conversations add column conversation_opened integer default 0</string>
+			<string>alter table my_comments add column mblogv4id VARCHAR(50)</string>
+		</array>
+		<key>35000</key>
+		<array>
+			<string>alter table task_queue add column need_wait_state integer default 0</string>
+			<string>alter table weibos add column pic_id_infos text</string>
+			<string>alter table weibos add column client_status_id varchar(255)</string>
+			<string>alter table weibos add column client_task_id integer</string>
+			<string>delete from pm_conversations</string>
+			<string>alter table pm_conversations add column type integer</string>
+			<string>alter table pm_conversations add column topTime integer</string>
+			<string>alter table pm_conversations add column unread_count integer</string>
+			<string>insert into pm_conversations (priority, unread_count, userId, topTime) values (&apos;1&apos;, &apos;0&apos;, &apos;1&apos;, &apos;1&apos;)</string>
+			<string>insert into pm_conversations (priority, unread_count, userId, topTime) values (&apos;2&apos;, &apos;0&apos;, &apos;2&apos;, &apos;1&apos;)</string>
+			<string>insert into pm_conversations (priority, unread_count, userId, topTime) values (&apos;3&apos;, &apos;0&apos;, &apos;3&apos;, &apos;1&apos;)</string>
+			<string>alter table pm_conversations add column is_block integer default 0</string>
+			<string>alter table pm_messages add column invite_state integer default 0;</string>
+			<string>alter table pm_attachments add column duration integer default 0;</string>
+			<string>alter table timeline_pagecards add column extra_properties text</string>
+		</array>
+		<key>34000</key>
+		<array>
+			<string>alter table timeline_pagecards add column cards text</string>
+			<string>alter table timeline_pagecards add column pageInfoKey VARCHAR(255)</string>
+			<string>alter table pm_conversations add column user text;</string>
+			<string>alter table pm_messages add column page_info text;</string>
+			<string>alter table timeline_pagecards add column subtype integer</string>
+			<string>alter table contacts add column messageUncompletedText text</string>
+		</array>
+		<key>33500</key>
+		<array>
+			<string>alter table timeline_pagecards add column lastUpdateTime double</string>
+			<string>alter table weibos add column topic_structs text</string>
+			<string>delete from timeline_trends</string>
+			<string>delete from weibos</string>
+			<string>alter table timeline_trends add column image_url varchar(255)</string>
+			<string>alter table timeline_trends add column image_scheme varchar(255)</string>
+		</array>
+		<key>33000</key>
+		<array>
+			<string>delete from weibos</string>
+			<string>alter table contacts add column meyouRelationship integer</string>
+			<string>alter table timeline_pagecards add column type integer</string>
+			<string>alter table timeline_pagecards add column contents text</string>
+		</array>
+		<key>32200</key>
+		<array>
+			<string>alter table weibos add column original_dateline INTEGER;</string>
+		</array>
+		<key>32000</key>
+		<array>
+			<string>alter table pm_conversations add column userRemark VARCHAR(100)</string>
+			<string>alter table pm_conversations add column userRelationship integer</string>
+			<string>alter table pm_conversations add column verifiedType integer</string>
+			<string>alter table weibos add column page_info text</string>
+			<string>CREATE TABLE &quot;timeline_pagecards&quot; (&quot;id&quot; INTEGER PRIMARY KEY  NOT NULL ,&quot;pageID&quot; VARCHAR(255),&quot;pageTitle&quot; VARCHAR(255),&quot;pageURL&quot; VARCHAR(255),&quot;pageTypeImageURL&quot; VARCHAR(255),&quot;pageImageURL&quot; VARCHAR(255),&quot;pageDescription&quot; VARCHAR(255),&quot;tips&quot; VARCHAR(255),&quot;isAsync&quot; INTEGER)</string>
+			<string>alter table weibos add column mark  varchar(50)</string>
+			<string>alter table weibos add column distance DOUBLE</string>
+			<string>alter table weibos add column attitudes_status integer</string>
+			<string>alter table weibos add column visible integer</string>
+			<string>alter table weibos add column mblogtypename varchar(50)</string>
+			<string>alter table weibos add column attitudes_count integer</string>
+			<string>alter table my_comments add column visible integer</string>
+			<string>alter table my_comments add column mblogtypename varchar(50)</string>
+			<string>drop table profileusers</string>
+			<string>CREATE TABLE profileusers (id integer NOT NULL PRIMARY KEY AUTOINCREMENT,userID varchar(50),screenName varchar(100),pageID varchar(255))</string>
+			<string>alter table contacts add originalVerifiedType varchar(50)</string>
+			<string>UPDATE contacts SET relationship = relationship + 1000</string>
+			<string>UPDATE contacts SET relationship = 256 WHERE relationship = 1000</string>
+			<string>UPDATE contacts SET relationship = 0 WHERE relationship = 1001</string>
+			<string>UPDATE contacts SET relationship = 2 WHERE relationship = 1002</string>
+			<string>UPDATE contacts SET relationship = 1 WHERE relationship = 1003</string>
+			<string>UPDATE contacts SET relationship = 3 WHERE relationship = 1004</string>
+			<string>UPDATE contacts SET relationship = 6 WHERE relationship = 1005</string>
+			<string>UPDATE contacts SET relationship = 4294901760 WHERE relationship = 1099</string>
+		</array>
+		<key>31500</key>
+		<array>
+			<string>alter table my_comments add column mblogtype integer</string>
+			<string>alter table weibos add column url_structs text</string>
+			<string>CREATE TABLE profileusers (id integer NOT NULL PRIMARY KEY AUTOINCREMENT,userID varchar(50),screenName varchar(100),profileImageURL varchar(255),remark varchar(50),extendedDescription varchar(255),relationship integer,verifiedType integer,permission integer,lastUsedTime timestamp,lastMessageTime timestamp,sortName varchar(100),sortSectionName varchar(10),searchText varchar(255),phoneNumber varchar(50),phoneName varchar(255),membershipType integer,&quot;desc&quot; varchar(255),verifiedReason varchar(255),gender integer,lastUpdateUserInfoTime timestamp)</string>
+		</array>
+		<key>31000</key>
+		<array>
+			<string>CREATE TABLE &quot;timeline_trends&quot; (&quot;trend_id&quot; INTEGER PRIMARY KEY,&quot;group_type&quot; varchar(50),type varchar(50),source varchar(200),&quot;source_icon&quot; varchar(200),&quot;feeds_content&quot; text, dateline integer, &quot;trend_title&quot; varchar(50), &quot;trend_icon&quot; varchar(200))</string>
+			<string>alter table weibos add column feedid integer</string>
+			<string>alter table weibos add column feedpriority integer default 0</string>
+		</array>
+		<key>30000</key>
+		<array>
+			<string>insert into extra_info (field, value) values (&apos;db_version&apos;, &apos;30000&apos;)</string>
+			<string>alter table contacts add phoneNumber varchar(50)</string>
+			<string>alter table contacts add phoneName varchar(255)</string>
+			<string>alter table contacts add lastMessageTime timestamp</string>
+			<string>alter table contacts add extendedDescription varchar(255)</string>
+			<string>drop table uploadFiles</string>
+			<string>drop table at_users</string>
+			<string>drop table my_pms</string>
+			<string>drop table my_pms_per</string>
+			<string>drop table my_weibos</string>
+			<string>drop table pm_users</string>
+			<string>drop table at_weibos</string>
+			<string>delete from weibos</string>
+			<string>alter table weibos add mblogidnum varchar(50)</string>
+			<string>alter table weibos add member_type varchar(50)</string>
+			<string>alter table weibos add rtrootidnum varchar(50)</string>
+			<string>alter table weibos add type varchar(50)</string>
+			<string>alter table weibos add attitudenum varchar(50)</string>
+			<string>alter table weibos add attitudeid varchar(50)</string>
+			<string>alter table my_comments add verifiedtype integer</string>
+			<string>alter table my_comments add type varchar(50)</string>
+			<string>CREATE TABLE &quot;contact_group_count&quot; (id integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,groupID varchar(50),count integer)</string>
+		</array>
+		<key>29500</key>
+		<array>
+			<string>alter table at_weibos add column wpinfo text</string>
+			<string>alter table weibos add column wpinfo text</string>
+			<string>alter table contacts add column searchText varchar(255)</string>
+			<string>alter table pm_messages add column latitude float DEFAULT 0</string>
+			<string>alter table pm_messages add column longitude float DEFAULT 0</string>
+			<string>alter table pm_messages add column locationHasOffset integer DEFAULT 0</string>
+			<string>alter table task_queue add column properties text</string>
+		</array>
+		<key>30500</key>
+		<array>
+			<string>alter table weibos add column complaintinfo text</string>
+			<string>alter table weibos add column rootcomplaintinfo text</string>
+			<string>alter table weibos add column priority integer default 0</string>
+			<string>alter table weibos add column mblogtype integer default 0</string>
+			<string>update weibos set priority = 0, mblogtype = 0</string>
+		</array>
+	</dict>
+</dict>
+</plist>

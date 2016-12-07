@@ -1,0 +1,12 @@
+{
+    "filtername_zh": "更多滤镜",
+    "filtername_en": "Weibo Camera",
+    "filtername_tw": "更多濾鏡",
+    "icon": "filter_icon.png",
+    "isDeletable": "0",
+    "filterid":"98",
+    "vsh": "",
+    "fsh": "",
+    "textures": [
+    ]
+}

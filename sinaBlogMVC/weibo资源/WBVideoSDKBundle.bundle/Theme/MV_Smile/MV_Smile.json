@@ -1,0 +1,64 @@
+{
+	"themeName":"MV_Smile",
+	"themeDisplayName":"smile",
+    "coverTimeAt":3.0,
+    "topic": "smile",
+    "mp3Array": [
+                 {
+                 "迟到了10分钟": "浪漫"
+                 }
+                 ],
+    "videoEffect":
+    [
+     {
+     "require": "ClipJump",
+     "clips":[
+              "7.4-10.0",
+              "0.0-6.4",
+              "5.0-10.0"
+              ]
+     },
+     {"require": "tail"},
+     
+     {
+     "require": "twoSource",
+     "fshPath": "MeiyanDissolveTransition2.GLSL",
+     "source1": {
+     "subMovieClipStart": "4.5",
+     "subMovieClipDuration": "1.0"
+     },
+     "start": "8.5",
+     "end": "9.4"
+     },
+     {
+     "require": "gaussianBlur",
+     "vshPath" : "MeiyanGaussianBlur.Vertex.GLSL",
+     "fshPath" : "MeiyanGaussianBlur.Fragment.GLSL"
+     },
+	 {
+	 "require": "multipleSource",
+	 "fshPath": "Smile_lut.GLSL",
+	 "source1": {
+		 "acvPath": "1.acv"
+	 },
+	 "source2": {
+		 "acvPath": "3.acv"
+	 }	
+	 },
+     {
+     "require": "twoSource",
+     "fshPath": "Screen.GLSL",
+     "source1": {
+     "videoPath": "smile_light.mp4"
+     }
+     },
+     {
+     "require": "twoSource",
+     "fshPath": "Screen.GLSL",
+     "source1": {
+     "videoPath": "smile_text.mp4"
+     },
+     "end": "9.0"
+     }
+     ]
+}

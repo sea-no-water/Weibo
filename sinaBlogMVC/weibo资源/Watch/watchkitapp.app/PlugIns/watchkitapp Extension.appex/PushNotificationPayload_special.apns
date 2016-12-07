@@ -1,0 +1,36 @@
+{
+    "aps": {
+        "alert":  {
+            "action-loc-key" : "PLAY",
+            "body" : "特别关注 wbaw_test1:人生，不是心情，而是心态。用一朵花看世界，世界就在花中。"
+        },
+        "title": "Optional title",
+        "category": "special"
+    },
+    
+    "WatchKit Simulator Actions": [
+                                   {
+                                   "title": "回复",
+                                   "identifier": "reply_status"
+                                   },
+                                   {
+                                   "title": "赞",
+                                   "identifier": "like_status"
+                                   },
+                                   {
+                                   "title": "转发",
+                                   "identifier": "repost"
+                                   }
+                                   ],
+    
+    "type": "0",
+    
+    "extra_info" : {
+        "srcid" : "3817756576937211",
+        "cid" : "3817756576937211",
+        "picUrl" : "http://tp1.sinaimg.cn/5148062640/180/5715322845/1",
+        "SAvaUrl" : "http://tp1.sinaimg.cn/1781721243/50/5715322845/1"
+    },
+    
+    "customKey": "Use this file to define a testing payload for your notifications. The aps dictionary specifies the category, alert text and title. The WatchKit Simulator Actions array can provide info for one or more action buttons in addition to the standard Dismiss button. Any other top level keys are custom payload. If you have multiple such JSON files in your project, you'll be able to choose between them in when selecting to debug the notification interface of your Watch App."
+}

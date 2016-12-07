@@ -1,0 +1,35 @@
+{
+    "aps": {
+        "alert":  {
+            "action-loc-key" : "PLAY",
+            "body" : "wbaw_test1 提到你:@witch61 ,这就是那个清晰的视频。"
+        },
+        "title": "Optional title",
+        "category": "at"
+    },
+    
+    "WatchKit Simulator Actions": [
+                                   {
+                                   "title": "回复",
+                                   "identifier": "reply_status"
+                                   },
+                                   {
+                                   "title": "赞",
+                                   "identifier": "like_status"
+                                   },
+                                   {
+                                   "title": "转发",
+                                   "identifier": "repost"
+                                   }
+                                   ],
+    
+    "type": "0",
+    
+    "extra_info" : {
+        "cid" : "3817459032804918",
+        "content" : "#小苹果AMA获奖#筷子兄弟在AMA全美音乐奖表演《小苹果》的现场视频来了!|优酷助力《小苹果》 问鼎第42届全美音乐奖 动感的节奏中，筷子兄弟走到台下将手中的“小苹果”送给了霉霉Taylor Swift、Selena Gomez、Lorde等人。",
+        "SAvaUrl" : "http://tp1.sinaimg.cn/1781721243/50/5715322845/1"
+    },
+    
+    "customKey": "Use this file to define a testing payload for your notifications. The aps dictionary specifies the category, alert text and title. The WatchKit Simulator Actions array can provide info for one or more action buttons in addition to the standard Dismiss button. Any other top level keys are custom payload. If you have multiple such JSON files in your project, you'll be able to choose between them in when selecting to debug the notification interface of your Watch App."
+}
